@@ -18,7 +18,7 @@ export function About() {
             <div className="md:w-1/3 p-6 flex items-center justify-center bg-gray-50">
               <div className="w-48 h-48 rounded-full bg-gray-200 overflow-hidden border-4 border-white shadow-lg">
                 <img 
-                  src="/images/kapil-mehra.png" 
+                  src={`${import.meta.env.BASE_URL}images/kapil-mehra.png`} 
                   alt="Kapil Mehra" 
                   className="w-full h-full object-cover"
                   onError={(e) => {

@@ -25,7 +25,7 @@ export const Navbar = ({ activeSection }: NavbarProps) => {
           <div className="flex-shrink-0 flex items-center space-x-3">
             <Link to="/" className="flex items-center">
               <img 
-                src="/images/km-logo-white.png" 
+                src={`${import.meta.env.BASE_URL}images/km-logo-white.png`} 
                 alt="KM Medical Consulting Logo" 
                 className="h-10 w-auto"
               />

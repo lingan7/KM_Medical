@@ -1,4 +1,5 @@
 import { FaShieldAlt, FaLightbulb, FaRocket, FaCogs, FaUserTie, FaChartBar } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 export function Opportunity() {
   return (
@@ -78,19 +79,19 @@ export function Opportunity() {
               <div className="bg-gray-50 p-8 md:p-10 rounded-2xl shadow-lg h-full border border-gray-200">
                 <div className="grid grid-cols-2 gap-8 md:gap-10 place-items-center">
                   <div className="text-center">
-                    <img src="/icons/cost.png" alt="Cost efficiency" className="mx-auto w-16 h-16 md:w-20 md:h-20 object-contain" />
+                    <img src={`${import.meta.env.BASE_URL}icons/cost.png`} alt="Cost efficiency" className="mx-auto w-16 h-16 md:w-20 md:h-20 object-contain" />
                     <p className="mt-3 text-sm md:text-base font-medium text-gray-800">Cost efficiency</p>
                   </div>
                   <div className="text-center">
-                    <img src="/icons/speed.png" alt="Time-to-market acceleration" className="mx-auto w-16 h-16 md:w-20 md:h-20 object-contain" />
+                    <img src={`${import.meta.env.BASE_URL}icons/speed.png`} alt="Time-to-market acceleration" className="mx-auto w-16 h-16 md:w-20 md:h-20 object-contain" />
                     <p className="mt-3 text-sm md:text-base font-medium text-gray-800">Time-to-market acceleration</p>
                   </div>
                   <div className="text-center">
-                    <img src="/icons/Quality.png" alt="Risk mitigation" className="mx-auto w-16 h-16 md:w-20 md:h-20 object-contain" />
+                    <img src={`${import.meta.env.BASE_URL}icons/Quality.png`} alt="Risk mitigation" className="mx-auto w-16 h-16 md:w-20 md:h-20 object-contain" />
                     <p className="mt-3 text-sm md:text-base font-medium text-gray-800">Risk mitigation</p>
                   </div>
                   <div className="text-center">
-                    <img src="/icons/efficiency.png" alt="Overall program success" className="mx-auto w-16 h-16 md:w-20 md:h-20 object-contain" />
+                    <img src={`${import.meta.env.BASE_URL}icons/efficiency.png`} alt="Overall program success" className="mx-auto w-16 h-16 md:w-20 md:h-20 object-contain" />
                     <p className="mt-3 text-sm md:text-base font-medium text-gray-800">Overall program success</p>
                   </div>
                 </div>
@@ -195,12 +196,12 @@ export function Opportunity() {
         {/* CTA Section */}
         <section className="text-center mt-16">
           <h3 className="text-2xl font-bold text-gray-800 mb-6">Ready to accelerate your medical device development?</h3>
-          <a 
-            href="/contact" 
+          <Link 
+            to="/contact" 
             className="inline-block bg-primary hover:bg-primary-light text-white font-medium py-3 px-8 rounded-lg transition duration-300"
           >
             Get in Touch
-          </a>
+          </Link>
         </section>
       </div>
     </div>
