@@ -1,4 +1,4 @@
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
@@ -46,8 +46,9 @@ const AppContent = () => {
 };
 
 const App = () => {
+  const basename = (import.meta as any).env.BASE_URL?.replace(/\/$/, '') || '';
   return (
-    <Router>
+    <Router basename={basename}>
       <AppContent />
     </Router>
   );

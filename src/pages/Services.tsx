@@ -1,4 +1,5 @@
 export function Services() {
+  const BASE = (import.meta as any).env.BASE_URL || '/';
   // Header section with styled box
   const headerBox = (
     <div className="bg-primary p-8 md:p-10 rounded-2xl shadow-lg mb-12 relative overflow-hidden">
@@ -16,7 +17,7 @@ export function Services() {
     {
       title: 'Strategy',
       description: 'Strategic planning and market analysis for medical device innovation',
-      iconSrc: '/icons/strategy.png',
+      iconSrc: `${BASE}icons/strategy.png`,
       details: [
         'Product & Technology Roadmaps',
         'Portfolio Planning',
@@ -26,7 +27,7 @@ export function Services() {
     {
       title: 'Execution',
       description: 'End-to-end product development and implementation',
-      iconSrc: '/icons/Execution.png',
+      iconSrc: `${BASE}icons/Execution.png`,
       details: [
         'Front-end innovation concepts and prototypes',
         'Design, Development and Verification',
@@ -38,7 +39,7 @@ export function Services() {
     {
       title: 'R&D Operations',
       description: 'Streamlining research and development processes',
-      iconSrc: '/icons/operations.png',
+      iconSrc: `${BASE}icons/operations.png`,
       details: [
         'NPD Process Development',
         'Design and Change Controls',
@@ -50,7 +51,7 @@ export function Services() {
     {
       title: 'Talent',
       description: 'Building and developing high-performing teams',
-      iconSrc: '/icons/Talent.png',
+      iconSrc: `${BASE}icons/Talent.png`,
       details: [
         'R&D Structure Design',
         'Competency Development',
