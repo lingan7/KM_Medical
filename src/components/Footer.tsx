@@ -1,0 +1,149 @@
+import { FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt, FaRegClock } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+
+export const Footer = () => {
+  const navItems = [
+    { id: 'home', label: 'Home', path: '/' },
+    { id: 'about', label: 'About Us', path: '/about' },
+    { id: 'opportunity', label: 'Opportunity', path: '/opportunity' },
+    { id: 'services', label: 'Services', path: '/services' },
+    { id: 'contact', label: 'Contact', path: '/contact' },
+  ] as const;
+
+  const socialLinks = [
+    {
+      name: 'LinkedIn',
+      href: 'https://linkedin.com/company/km-medical-consulting',
+      icon: FaLinkedin,
+    },
+  ];
+
+  return (
+    <footer className="bg-primary text-white">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold text-white">
+              KM Medical Device Consulting
+            </h3>
+            <p className="text-gray-200 text-sm leading-relaxed">
+              Expert consulting services for medical device companies, helping you navigate regulatory pathways and bring your innovative products to market efficiently.
+            </p>
+            <div className="flex space-x-4 pt-2">
+              {socialLinks.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                  <span className="sr-only">{item.name}</span>
+                  <item.icon className="h-5 w-5" aria-hidden="true" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-6 pb-2 border-b border-white/20">Quick Links</h4>
+            <ul className="space-y-3">
+              {navItems.map((item) => (
+                <li key={`footer-${item.id}`}>
+                  <Link
+                    to={item.path}
+                    className="group text-white hover:text-white transition-colors duration-200 text-base font-medium flex items-center py-1"
+                  >
+                    <span className="w-2 h-0.5 bg-white opacity-75 mr-3 transition-all duration-200 group-hover:w-4 group-hover:opacity-100"></span>
+                    <span className="group-hover:translate-x-1 transition-transform duration-200">
+                      {item.label}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Contact Us</h4>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <FaEnvelope className="flex-shrink-0 h-5 w-5 text-white/80 mt-0.5" />
+                <a href="mailto:info@kmmedicalconsulting.com" className="ml-3 text-white/80 hover:text-white text-sm">
+                  info@kmmedicalconsulting.com
+                </a>
+              </li>
+              <li className="flex items-start">
+                <FaPhone className="flex-shrink-0 h-5 w-5 text-white/80 mt-0.5" />
+                <a href="tel:+1234567890" className="ml-3 text-white/80 hover:text-white text-sm">
+                  +1 (234) 567-890
+                </a>
+              </li>
+              <li className="flex items-start">
+                <FaMapMarkerAlt className="flex-shrink-0 h-5 w-5 text-white/80 mt-0.5" />
+                <span className="ml-3 text-white/80 text-sm">
+                  123 Medical Drive, Suite 100<br />
+                  Boston, MA 02118
+                </span>
+              </li>
+              <li className="flex items-start">
+                <FaRegClock className="flex-shrink-0 h-5 w-5 text-white/80 mt-0.5" />
+                <span className="ml-3 text-white/80 text-sm">
+                  Mon-Fri: 9:00 AM - 6:00 PM
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Stay Updated</h4>
+            <p className="text-white/80 text-sm mb-3">
+              Subscribe to our newsletter for the latest updates and insights.
+            </p>
+            <form className="mt-2">
+              <div className="flex">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="px-4 py-2 w-full rounded-l-lg focus:outline-none focus:ring-2 focus:ring-white/40 text-gray-800 text-sm"
+                  aria-label="Email address"
+                />
+                <button
+                  type="submit"
+                  className="bg-gradient-to-r from-primary to-primary-light text-white px-4 py-2 rounded-r-lg hover:opacity-90 transition-opacity text-sm font-medium"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-12 pt-6 border-t border-white/20">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-white/80 text-xs">
+              &copy; {new Date().getFullYear()} KM Medical Device Consulting. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/privacy" className="text-white/80 hover:text-white text-xs">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-white/80 hover:text-white text-xs">
+                Terms of Service
+              </Link>
+              <Link to="/cookies" className="text-white/80 hover:text-white text-xs">
+                Cookie Policy
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
