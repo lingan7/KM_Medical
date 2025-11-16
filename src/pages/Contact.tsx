@@ -44,7 +44,7 @@ export function Contact() {
       <div className="bg-white rounded-xl shadow-lg overflow-hidden">
         <div className="md:flex">
           {/* Contact Information */}
-          <div className="md:w-1/2 bg-gray-50 p-12">
+          <div className="md:w-1/2 bg-gray-50 p-8 md:p-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-8">Contact</h2>
             
             <div className="space-y-8">

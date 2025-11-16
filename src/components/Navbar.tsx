@@ -20,7 +20,7 @@ export const Navbar = ({ activeSection }: NavbarProps) => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100">
-      <div className="max-w-7xl mx-auto pr-4 sm:pr-6 lg:pr-8">
+      <div className="max-w-7xl mx-auto px-4 sm:pr-6 lg:pr-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center space-x-3">
             <Link to="/" className="flex items-center">
