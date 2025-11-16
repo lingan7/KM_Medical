@@ -13,7 +13,7 @@ export const Footer = () => {
   const socialLinks = [
     {
       name: 'LinkedIn',
-      href: 'https://linkedin.com/company/km-medical-consulting',
+      href: 'https://linkedin.com/in/kapil-mehra-usa',
       icon: FaLinkedin,
     },
   ];
