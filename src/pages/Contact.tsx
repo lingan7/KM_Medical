@@ -55,9 +55,9 @@ export function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-medium text-gray-900 mb-1">Email</h3>
-                  <a href="mailto:inquiry@kmmedicaldeviceconsulting.com" className="text-primary hover:text-primary-light transition-colors">
-                    inquiry@kmmedicaldeviceconsulting.com
+                  <h3 className="font-medium text-gray-900 mb-1 text-sm">Email</h3>
+                  <a href="mailto:info@kmmedicaldeviceconsulting.com" className="text-primary hover:text-primary-light transition-colors text-sm">
+                    info@kmmedicaldeviceconsulting.com
                   </a>
                 </div>
               </div>
@@ -69,12 +69,12 @@ export function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-medium text-gray-900 mb-1">LinkedIn</h3>
+                  <h3 className="font-medium text-gray-900 mb-1 text-sm">LinkedIn</h3>
                   <a 
                     href="https://linkedin.com/in/kapil-mehra-usa" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-primary hover:text-primary-light transition-colors"
+                    className="text-primary hover:text-primary-light transition-colors text-sm"
                   >
                     linkedin.com/in/kapil-mehra-usa
                   </a>
@@ -159,8 +159,6 @@ export function Contact() {
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
                 >
                   <option value="General Inquiry">General Inquiry</option>
-                  <option value="Regulatory Services">Regulatory Services</option>
-                  <option value="Quality Management">Quality Management</option>
                   <option value="Product Development">Product Development</option>
                   <option value="Other">Other</option>
                 </select>

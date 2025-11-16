@@ -34,7 +34,7 @@ export function About() {
               <h2 className="text-2xl font-semibold mb-4 text-gray-800">Kapil Mehra, MS ME | MBA</h2>
               <p className="text-lg font-medium text-primary mb-4">Founder & Principal Consultant, KM Medical Device Consulting, LLC</p>
               <p className="text-gray-700 leading-relaxed">
-                Over 20 years in a F100 MedTech company leading R&D and product development for Class I & II devices—from concept to FDA clearance and commercialization. Kapil partners with emerging med-tech firms to accelerate design, meet regulatory expectations, and bring commercially viable devices to market.
+                20 years in a F100 MedTech company leading R&D and product development for Class I & II devices—from concept to FDA clearance and commercialization. Kapil partners with startups and emerging med-tech firms to accelerate design, meet regulatory expectations, and bring commercially viable devices to market.
               </p>
             </div>
           </div>
@@ -44,47 +44,108 @@ export function About() {
           <h2 className="text-2xl font-semibold mb-6 text-gray-800">Our Expertise</h2>
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-              <h3 className="text-xl font-medium mb-3 text-primary">Regulatory Strategy</h3>
+              <h3 className="text-xl font-medium mb-3 text-primary">R&D Strategy</h3>
               <p className="text-gray-700">
-                With deep expertise in FDA, CE Marking, and other global regulatory requirements, we help you develop 
-                comprehensive regulatory strategies tailored to your medical device's classification and intended market.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-              <h3 className="text-xl font-medium mb-3 text-primary">Quality Management</h3>
-              <p className="text-gray-700">
-                We assist in establishing and maintaining ISO 13485 compliant quality management systems, ensuring 
-                your products meet the highest industry standards throughout their lifecycle.
+                Strategic product and portfolio planning including pipeline, financial analytics, where to play, and how to win
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
               <h3 className="text-xl font-medium mb-3 text-primary">Product Development</h3>
               <p className="text-gray-700">
-                Our team provides guidance on design controls, risk management, and verification/validation strategies 
-                to streamline your product development process.
+                Front end innovation and comprehensive execution from specifications to V&V and launch
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+              <h3 className="text-xl font-medium mb-3 text-primary">R&D Operations</h3>
+              <p className="text-gray-700">
+                Deploy lean and efficient processes, tools, and infrastructure for rapid product development
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+              <h3 className="text-xl font-medium mb-3 text-primary">Technical Talent Leadership</h3>
+              <p className="text-gray-700">
+                Mentor and train technical talent to learn the tricks of the trade, development, and career advancement
               </p>
             </div>
           </div>
         </section>
-
-        <section className="bg-gray-50 p-8 rounded-2xl">
-          <h2 className="text-2xl font-semibold mb-6 text-gray-800">Why Choose Us?</h2>
-          <ul className="space-y-4">
-            {[
-              "Industry veterans with decades of combined experience in medical device regulation",
-              "Personalized approach tailored to your specific needs and goals",
-              "Proven track record of successful regulatory submissions and approvals",
-              "Comprehensive support from concept to commercialization",
-              "Commitment to maintaining the highest ethical and professional standards"
-            ].map((item, index) => (
-              <li key={index} className="flex items-start">
-                <svg className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+        {/* Why Engage Us */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-center mb-12">Why Engage Us</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {/* Efficiency */}
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <svg className="h-7 w-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
-                <span className="text-gray-700">{item}</span>
-              </li>
-            ))}
-          </ul>
+              </div>
+              <h3 className="text-xl font-semibold text-center mb-4">Efficient Execution</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Optimized Processes</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Cost effective development</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Speed to market</span>
+                </li>
+              </ul>
+            </div>
+            
+            {/* Quality */}
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <svg className="h-7 w-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-center mb-4">Quality Work</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Fully verified</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>FDA ready</span>
+                </li>
+              </ul>
+            </div>
+            
+            {/* Leadership */}
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <svg className="h-7 w-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-center mb-4">Founder led</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Direct Collaboration</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Flexible Arrangements</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Partner Network</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Integrity</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
       </div>
     </div>

@@ -8,7 +8,7 @@ export function Services() {
         Fractional Leadership and Expert Guidance
       </h1>
       <p className="text-xl text-white/90">
-        For medical device innovation and compliance
+        For medical device innovation and product development
       </p>
     </div>
   );
@@ -27,7 +27,7 @@ export function Services() {
     {
       title: 'Execution',
       description: 'End-to-end product development and implementation',
-      iconSrc: `${BASE}icons/Execution.png`,
+      iconSrc: `${BASE}icons/Product_Development.png`,
       details: [
         'Front-end innovation concepts and prototypes',
         'Design, Development and Verification',
@@ -39,7 +39,7 @@ export function Services() {
     {
       title: 'R&D Operations',
       description: 'Streamlining research and development processes',
-      iconSrc: `${BASE}icons/operations.png`,
+      iconSrc: `${BASE}icons/R&D_operations.png`,
       details: [
         'NPD Process Development',
         'Design and Change Controls',
@@ -63,12 +63,17 @@ export function Services() {
 
   const whoWeServe = [
     {
-      title: 'MedTech Startups and Physician Innovators',
+      title: 'MedTech Startups',
       description: 'Ideas to concept or fully developed FDA cleared products',
       icon: '🚀'
     },
     {
-      title: 'Emerging MedTech Companies',
+      title: 'Physician Innovators',
+      description: 'R&D Leadership, Project Management or Technical Talent Development',
+      icon: '🏢'
+    },
+    {
+      title: 'Emerging MedTech\'s',
       description: 'Ideas to concept or fully developed FDA cleared products',
       icon: '📈'
     },
@@ -76,11 +81,6 @@ export function Services() {
       title: 'Venture Capital Firms and Investors',
       description: 'Seeking Independent Technical Diligence',
       icon: '💼'
-    },
-    {
-      title: 'Large MedTech Corporations',
-      description: 'R&D Leadership, Project Management or Technical Talent Development',
-      icon: '🏢'
     }
   ];
 
@@ -92,27 +92,27 @@ export function Services() {
       {/* Services Section */}
       <section className="mb-20">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-primary/30 hover:scale-105"
             >
-              <div className="mb-4">
+              <div className="mb-6 flex items-center justify-center w-16 h-16 bg-primary/10 rounded-xl">
                 <img 
                   src={service.iconSrc} 
                   alt={`${service.title} icon`} 
-                  className="h-10 w-10 object-contain" 
+                  className="h-12 w-12 object-contain" 
                   onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                 />
               </div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
-              <ul className="space-y-2 pl-12">
+              <h3 className="text-2xl font-bold mb-4 text-gray-800">{service.title}</h3>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+              <ul className="space-y-3">
                 {service.details.map((detail, i) => (
                   <li key={i} className="flex items-start text-gray-700">
-                    <span className="text-primary mr-2">•</span>
-                    <span>{detail}</span>
+                    <span className="text-primary mr-3 text-lg">•</span>
+                    <span className="text-base leading-relaxed">{detail}</span>
                   </li>
                 ))}
               </ul>
@@ -124,17 +124,21 @@ export function Services() {
       {/* Who We Serve Section */}
       <section className="mb-20">
         <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Who We Serve</h2>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {whoWeServe.map((item, index) => (
             <div 
               key={index} 
-              className="bg-gradient-to-br from-primary/5 to-white p-8 rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-all duration-300"
+              className="bg-gradient-to-br from-primary/10 to-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
-              <div className="flex items-center mb-4">
-                <span className="text-3xl mr-4">{item.icon}</span>
-                <h3 className="text-xl font-semibold text-gray-800">{item.title}</h3>
+              <div className="flex flex-col items-center">
+                <img 
+                  src={`/images/${item.title.toLowerCase().replace(/\s+/g, '')}.png`} 
+                  alt={`${item.title} image`} 
+                  className="w-40 h-40 object-contain mb-4 rounded-2xl"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                />
+                <h3 className="text-2xl font-bold text-gray-800 text-center">{item.title}</h3>
               </div>
-              <p className="text-gray-600 pl-12">{item.description}</p>
             </div>
           ))}
         </div>
@@ -143,7 +147,7 @@ export function Services() {
       <div className="mt-20 bg-gray-50 rounded-2xl p-8 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Need a custom solution?</h2>
         <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
-          Our team can tailor our services to meet your specific regulatory and quality needs.
+          We can tailor our services to meet your specific vision and mission​
         </p>
         <button className="bg-primary hover:bg-primary-light text-white font-medium py-3 px-8 rounded-lg transition duration-300">
           Contact Us Today

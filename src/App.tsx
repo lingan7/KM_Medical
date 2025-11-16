@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { Navbar } from './components/Navbar';
+import Navbar from './components/Navbar.tsx';
 import { Footer } from './components/Footer';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
@@ -30,7 +30,7 @@ const AppContent = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar activeSection={activeSection} />
-      <main className="flex-grow">
+      <main className="flex-grow pt-16">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />

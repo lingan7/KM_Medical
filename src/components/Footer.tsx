@@ -25,10 +25,10 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-white">
-              KM Medical Device Consulting
+              KM Medical Device Consulting, LLC
             </h3>
             <p className="text-gray-200 text-sm leading-relaxed">
-              Expert consulting services for medical device companies, helping you navigate regulatory pathways and bring your innovative products to market efficiently.
+              Expert consulting services to help bring innovative medical technologies to market in an efficient and compliant way.
             </p>
             <div className="flex space-x-4 pt-2">
               {socialLinks.map((item) => (
@@ -56,7 +56,9 @@ export const Footer = () => {
                     to={item.path}
                     className="group text-white hover:text-white transition-colors duration-200 text-base font-medium flex items-center py-1"
                   >
-                    <span className="w-2 h-0.5 bg-white opacity-75 mr-3 transition-all duration-200 group-hover:w-4 group-hover:opacity-100"></span>
+                    <svg className="w-4 h-4 mr-3 text-white/75 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                     <span className="group-hover:translate-x-1 transition-transform duration-200">
                       {item.label}
                     </span>
@@ -79,21 +81,8 @@ export const Footer = () => {
               <li className="flex items-start">
                 <FaPhone className="flex-shrink-0 h-5 w-5 text-white/80 mt-0.5" />
                 <a href="tel:+1234567890" className="ml-3 text-white/80 hover:text-white text-sm">
-                  +1 (234) 567-890
+                  +1 (616) 821-1996
                 </a>
-              </li>
-              <li className="flex items-start">
-                <FaMapMarkerAlt className="flex-shrink-0 h-5 w-5 text-white/80 mt-0.5" />
-                <span className="ml-3 text-white/80 text-sm">
-                  123 Medical Drive, Suite 100<br />
-                  Boston, MA 02118
-                </span>
-              </li>
-              <li className="flex items-start">
-                <FaRegClock className="flex-shrink-0 h-5 w-5 text-white/80 mt-0.5" />
-                <span className="ml-3 text-white/80 text-sm">
-                  Mon-Fri: 9:00 AM - 6:00 PM
-                </span>
               </li>
             </ul>
           </div>
@@ -127,18 +116,15 @@ export const Footer = () => {
         <div className="mt-12 pt-6 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-white/80 text-xs">
-              &copy; {new Date().getFullYear()} KM Medical Device Consulting. All rights reserved.
+              &copy; {new Date().getFullYear()} KM Medical Device Consulting, LLC. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-white/80 hover:text-white text-xs">
+              <a href="https://www.bluehost.com/support/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white text-xs">
                 Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-white/80 hover:text-white text-xs">
-                Terms of Service
-              </Link>
-              <Link to="/cookies" className="text-white/80 hover:text-white text-xs">
+              </a>
+              <a href="https://www.bluehost.com/support/cookie-policy" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white text-xs">
                 Cookie Policy
-              </Link>
+              </a>
             </div>
           </div>
         </div>

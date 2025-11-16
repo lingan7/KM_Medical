@@ -9,28 +9,28 @@ interface NavbarProps {
 
 export const Navbar = ({ activeSection }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  
   const navItems = [
     { id: 'home', label: 'Home', path: '/' },
-    { id: 'about', label: 'About me', path: '/about' },
+    { id: 'about', label: 'About', path: '/about' },
     { id: 'opportunity', label: 'Opportunity', path: '/opportunity' },
     { id: 'services', label: 'Services', path: '/services' },
     { id: 'contact', label: 'Contact', path: '/contact' },
   ] as const;
 
   return (
-    <nav className="bg-white shadow-md">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center space-x-3">
             <Link to="/" className="flex items-center">
               <img 
-                src={`${import.meta.env.BASE_URL}images/km-logo-white.png`} 
-                alt="KM Medical Consulting Logo" 
+                src={`${import.meta.env.BASE_URL}images/km-logo-white.png`}
+                alt="KM Medical Consulting Logo"
                 className="h-10 w-auto"
               />
-              <span className="ml-3 text-xl font-bold text-primary hover:text-primary-dark transition-colors hidden sm:inline">
-                KM Medical Device Consulting
+              <span className="ml-3 text-2xl font-bold text-primary hover:text-primary-dark transition-colors hidden sm:inline">
+                KM Medical Device Consulting, LLC
               </span>
             </Link>
           </div>
@@ -50,7 +50,6 @@ export const Navbar = ({ activeSection }: NavbarProps) => {
                 {item.label}
               </Link>
             ))}
-
           </div>
           
           {/* Mobile menu button */}
@@ -86,7 +85,7 @@ export const Navbar = ({ activeSection }: NavbarProps) => {
       </div>
 
       {/* Mobile menu */}
-      <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
+      <div className={`${isOpen ? 'block' : 'hidden'} md:hidden bg-white border-b border-gray-100`}>
         <div className="pt-2 pb-3 space-y-1">
           {navItems.map((item) => (
             <Link
@@ -107,3 +106,5 @@ export const Navbar = ({ activeSection }: NavbarProps) => {
     </nav>
   );
 };
+
+export default Navbar;
