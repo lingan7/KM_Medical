@@ -9,7 +9,7 @@ export function Home() {
           <img 
             src={`${import.meta.env.BASE_URL}images/homeBG.png`} 
             alt="Medical Device Consulting Background" 
-            className="w-full h-auto object-cover"
+            className="w-full h-[60vh] min-h-[400px] object-cover md:h-auto md:min-h-[500px]"
           />
           <div className="absolute inset-0 bg-black/40"></div>
           <div className="absolute inset-0 flex items-center justify-center px-6 py-14 md:px-12 md:py-20">
@@ -93,8 +93,7 @@ export function Home() {
             to="/about" 
             className="text-primary hover:text-primary-light font-medium inline-flex items-center"
           >
-            Learn more about us
-            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            Learn more about us<svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
@@ -102,7 +101,7 @@ export function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="text-center py-16">
+      <section className="text-center py-8">
         <h2 className="text-3xl font-bold mb-6">Ready to accelerate your medical device development?</h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
           Contact us today to discuss how we can support your medical device journey.

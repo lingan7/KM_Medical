@@ -172,30 +172,14 @@ export function Opportunity() {
                 </div>
               </div>
 
-              {/* Solution Images Section */}
+              {/* Solution Image Section */}
               <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg h-full border border-gray-200">
-                <div className="grid grid-cols-1 gap-6 h-full">
-                  <div className="flex justify-center items-center">
-                    <img 
-                      src={`${import.meta.env.BASE_URL}images/Solution1.png`} 
-                      alt="Solution 1" 
-                      className="max-w-full h-auto rounded-lg shadow-md"
-                    />
-                  </div>
-                  <div className="flex justify-center items-center">
-                    <img 
-                      src={`${import.meta.env.BASE_URL}images/Solution2.png`} 
-                      alt="Solution 2" 
-                      className="max-w-full h-auto rounded-lg shadow-md"
-                    />
-                  </div>
-                  <div className="flex justify-center items-center">
-                    <img 
-                      src={`${import.meta.env.BASE_URL}images/Solution3.png`} 
-                      alt="Solution 3" 
-                      className="max-w-full h-auto rounded-lg shadow-md"
-                    />
-                  </div>
+                <div className="flex justify-center items-center h-full">
+                  <img 
+                    src={`${import.meta.env.BASE_URL}images/FDA_Approved.png`} 
+                    alt="FDA Approved" 
+                    className="max-w-full h-auto rounded-lg shadow-md"
+                  />
                 </div>
               </div>
             </div>

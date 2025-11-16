@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function Services() {
   const BASE = (import.meta as any).env.BASE_URL || '/';
   // Header section with styled box
@@ -149,9 +151,12 @@ export function Services() {
         <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
           We can tailor our services to meet your specific vision and mission​
         </p>
-        <button className="bg-primary hover:bg-primary-light text-white font-medium py-3 px-8 rounded-lg transition duration-300">
+        <Link 
+          to="/contact" 
+          className="bg-primary hover:bg-primary-light text-white font-medium py-3 px-8 rounded-lg transition duration-300 inline-block"
+        >
           Contact Us Today
-        </button>
+        </Link>
       </div>
     </div>
   );
