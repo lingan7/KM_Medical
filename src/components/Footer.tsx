@@ -1,4 +1,4 @@
-import { FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt, FaRegClock } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 export const Footer = () => {
