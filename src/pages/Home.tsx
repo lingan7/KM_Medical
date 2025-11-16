@@ -12,12 +12,12 @@ export function Home() {
             className="w-full h-[60vh] min-h-[400px] object-cover md:h-auto md:min-h-[500px]"
           />
           <div className="absolute inset-0 bg-black/40"></div>
-          <div className="absolute inset-0 flex items-center justify-center px-6 py-14 md:px-12 md:py-20">
+          <div className="absolute inset-0 flex items-center justify-center px-4 py-8 md:px-12 md:py-20">
             <div className="max-w-4xl mx-auto text-center text-white">
-              <h1 className="text-4xl md:text-6xl font-bold mb-8 text-white">
+              <h1 className="text-3xl md:text-6xl font-bold mb-4 md:mb-8 text-white">
                 Transforming Medical Innovations into Market Success
               </h1>
-              <p className="text-lg md:text-2xl mb-12 leading-relaxed text-white/90">
+              <p className="text-base md:text-2xl mb-6 md:mb-12 leading-relaxed text-white/90">
                 At KM Medical Device Consulting, we guide you from concept to FDA approval, ensuring compliance, speed, and efficiency in every step of your journey.
               </p>
               <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 justify-center">
