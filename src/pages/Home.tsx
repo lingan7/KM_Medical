@@ -7,7 +7,7 @@ export function Home() {
       <section className="relative bg-white">
         <div className="relative shadow-lg overflow-hidden">
           <img 
-            src="/images/homeBG.png" 
+            src={`${import.meta.env.BASE_URL}images/homeBG.png`} 
             alt="Medical Device Consulting Background" 
             className="w-full h-auto object-cover"
           />
@@ -47,29 +47,29 @@ export function Home() {
             {
               title: 'Strategy',
               description: 'Where to play & how to win',
-              iconSrc: `${import.meta.env.BASE_URL}icons/strategy.png`
+              iconSrc: `${import.meta.env.BASE_URL}images/strategy.png`
             },
             {
               title: 'Product Development',
               description: 'Development & Execution',
-              iconSrc: `${import.meta.env.BASE_URL}icons/Product_Development.png`
+              iconSrc: `${import.meta.env.BASE_URL}images/productdevelopment.png`
             },
             {
               title: 'R&D Operations',
               description: 'Processes, Tools, Infrastructure',
-              iconSrc: `${import.meta.env.BASE_URL}icons/R&D_operations.png`
+              iconSrc: `${import.meta.env.BASE_URL}images/randdoperations.png`
             },
             {
               title: 'Talent',
               description: 'Competencies, Partnerships',
-              iconSrc: `${import.meta.env.BASE_URL}icons/Talent.png`
+              iconSrc: `${import.meta.env.BASE_URL}images/talent.png`
             }
           ].map((service, index) => (
             <div key={index} className={`bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow ${index === 0 ? 'ml-5' : ''} ${index === 3 ? 'mr-5' : ''}`}>
               <h3 className="text-xl font-semibold mb-3 text-center">{service.title}</h3>
               <div className="mb-3 flex justify-center">
                 <img 
-                  src={service.iconSrc}
+                  src={`${import.meta.env.BASE_URL}images/${service.title.toLowerCase().replace(/\s+/g, '')}.png`}
                   alt={`${service.title} icon`}
                   className="h-12 w-12 object-contain"
                   onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}

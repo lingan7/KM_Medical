@@ -132,7 +132,7 @@ export function Services() {
             >
               <div className="flex flex-col items-center">
                 <img 
-                  src={`/images/${item.title.toLowerCase().replace(/\s+/g, '')}.png`} 
+                  src={`${import.meta.env.BASE_URL}images/${item.title.toLowerCase().replace(/\s+/g, '')}.png`} 
                   alt={`${item.title} image`} 
                   className="w-40 h-40 object-contain mb-4 rounded-2xl"
                   onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}

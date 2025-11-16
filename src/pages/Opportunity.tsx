@@ -114,7 +114,7 @@ export function Opportunity() {
                 {/* Right Column - Image */}
                 <div className="flex justify-center h-full min-h-[350px]">
                   <img 
-                    src="/images/Challenge.png" 
+                    src={`${import.meta.env.BASE_URL}images/Challenge.png`} 
                     alt="Medical Device Development Challenge" 
                     className="max-w-full h-full object-contain rounded-lg shadow-md"
                   />
@@ -177,21 +177,21 @@ export function Opportunity() {
                 <div className="grid grid-cols-1 gap-6 h-full">
                   <div className="flex justify-center items-center">
                     <img 
-                      src="/images/Solution1.png" 
+                      src={`${import.meta.env.BASE_URL}images/Solution1.png`} 
                       alt="Solution 1" 
                       className="max-w-full h-auto rounded-lg shadow-md"
                     />
                   </div>
                   <div className="flex justify-center items-center">
                     <img 
-                      src="/images/Solution2.png" 
+                      src={`${import.meta.env.BASE_URL}images/Solution2.png`} 
                       alt="Solution 2" 
                       className="max-w-full h-auto rounded-lg shadow-md"
                     />
                   </div>
                   <div className="flex justify-center items-center">
                     <img 
-                      src="/images/Solution3.png" 
+                      src={`${import.meta.env.BASE_URL}images/Solution3.png`} 
                       alt="Solution 3" 
                       className="max-w-full h-auto rounded-lg shadow-md"
                     />
