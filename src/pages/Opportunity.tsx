@@ -57,7 +57,7 @@ export function Opportunity() {
             <section className="mb-16 bg-white rounded-xl shadow-lg p-8">
               <h2 className="text-3xl font-bold mb-8 text-gray-900">Challenge</h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
                 {/* Left Column - Challenge Items */}
                 <div className="space-y-6">
                   <div className="flex items-start">
@@ -65,7 +65,7 @@ export function Opportunity() {
                       <FaShieldAlt className="h-5 w-5" />
                     </div>
                     <div className="ml-3">
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-lg">
                         <span className="font-medium">FDA approved Medical Device</span>
                       </p>
                     </div>
@@ -76,7 +76,7 @@ export function Opportunity() {
                       <FaFileAlt className="h-5 w-5" />
                     </div>
                     <div className="ml-3">
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-lg">
                         <span className="font-medium">Must meet CFR/ISO requirements</span>
                       </p>
                     </div>
@@ -87,7 +87,7 @@ export function Opportunity() {
                       <FaChartBar className="h-5 w-5" />
                     </div>
                     <div className="ml-3">
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-lg">
                         <span className="font-medium">Must show objective evidence of outputs</span>
                       </p>
                     </div>
@@ -98,26 +98,89 @@ export function Opportunity() {
                       <FaCogs className="h-5 w-5" />
                     </div>
                     <div className="ml-3">
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-lg">
                         <span className="font-medium">Must follow the development process per the QMS</span>
                       </p>
                     </div>
                   </div>
                   
                   <div className="mt-8 p-4 bg-gray-50 rounded-lg border-l-4 border-primary">
-                    <p className="text-gray-800 font-medium">
+                    <p className="text-gray-800 font-medium text-lg">
                       Journey entails risk, time, expenses, and resources.
                     </p>
                   </div>
                 </div>
                 
-                {/* Right Column - Image */}
-                <div className="flex justify-center h-full min-h-[350px]">
-                  <img 
-                    src={`${import.meta.env.BASE_URL}images/Challenge.png`} 
-                    alt="Medical Device Development Challenge" 
-                    className="max-w-full h-full object-contain rounded-lg shadow-md"
-                  />
+                {/* Right Column - Block Diagram */}
+                <div className="flex justify-center items-center h-full min-h-[350px]">
+                  <div className="w-full max-w-md">
+                    <div className="space-y-4">
+                      {/* Stage 1 */}
+                      <div className="flex items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+                        <div className="ml-4 flex-1">
+                          <div className="bg-red-300 text-gray-800 rounded-xl p-4 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-red-400">
+                            <h4 className="font-semibold text-center text-sm">Concept & Design</h4>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Arrow */}
+                      <div className="flex justify-center opacity-0 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                        <div className="w-0.5 h-6 bg-primary/30"></div>
+                      </div>
+                      
+                      {/* Stage 2 */}
+                      <div className="flex items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+                        <div className="ml-4 flex-1">
+                          <div className="bg-blue-300 text-gray-800 rounded-xl p-4 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-blue-400">
+                            <h4 className="font-semibold text-center text-sm">Prototyping & Testing</h4>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Arrow */}
+                      <div className="flex justify-center opacity-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+                        <div className="w-0.5 h-6 bg-primary/30"></div>
+                      </div>
+                      
+                      {/* Stage 3 */}
+                      <div className="flex items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
+                        <div className="ml-4 flex-1">
+                          <div className="bg-yellow-300 text-gray-800 rounded-xl p-4 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-yellow-400">
+                            <h4 className="font-semibold text-center text-sm">Verification & Validation</h4>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Arrow */}
+                      <div className="flex justify-center opacity-0 animate-fade-in" style={{ animationDelay: '0.9s' }}>
+                        <div className="w-0.5 h-6 bg-primary/30"></div>
+                      </div>
+                      
+                      {/* Stage 4 */}
+                      <div className="flex items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '1.0s' }}>
+                        <div className="ml-4 flex-1">
+                          <div className="bg-orange-300 text-gray-800 rounded-xl p-4 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-orange-400">
+                            <h4 className="font-semibold text-center text-sm">Regulatory Submission</h4>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Arrow */}
+                      <div className="flex justify-center opacity-0 animate-fade-in" style={{ animationDelay: '1.2s' }}>
+                        <div className="w-0.5 h-6 bg-primary/30"></div>
+                      </div>
+                      
+                      {/* Stage 5 */}
+                      <div className="flex items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '1.3s' }}>
+                        <div className="ml-4 flex-1">
+                          <div className="bg-green-300 text-gray-800 rounded-xl p-4 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-green-400">
+                            <h4 className="font-semibold text-center text-sm">Market Launch</h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
@@ -132,7 +195,7 @@ export function Opportunity() {
                       <FaRocket className="h-5 w-5" />
                     </div>
                     <div className="ml-3">
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-lg">
                         Engage an experienced, knowledgeable, and trusted advisor
                       </p>
                     </div>
@@ -143,18 +206,20 @@ export function Opportunity() {
                       <FaShieldAlt className="h-5 w-5" />
                     </div>
                     <div className="ml-3">
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-lg">
                         Strategically manage costs, time-to-market, quality, and risk profile
                       </p>
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold mb-6 text-gray-800">Result</h3>
+                  
+                  <div className="mt-10">
+                    <h3 className="text-2xl font-bold mb-4 mt-20 text-gray-800">Result</h3>
                   <div className="flex items-start">
                     <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
                       <FaCheckCircle className="h-5 w-5" />
                     </div>
                     <div className="ml-3">
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-lg">
                         Successful execution and launch
                       </p>
                     </div>
@@ -164,10 +229,11 @@ export function Opportunity() {
                       <FaTrophy className="h-5 w-5" />
                     </div>
                     <div className="ml-3">
-                      <p className="text-gray-700">
+                      <p className="text-gray-700 text-lg">
                         Meet customer and business expectations
                       </p>
                     </div>
+                  </div>
                   </div>
                 </div>
               </div>
@@ -187,12 +253,12 @@ export function Opportunity() {
         </section>
 
         {/* Why Engage Us Section */}
-        <section className="mb-12">
+        {/* <section className="mb-12">
           <h2 className="text-3xl font-bold text-center mb-12">Why Engage Us</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"> */}
             {/* Deep Expertise */}
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            {/* <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
                 <FaLightbulb className="h-7 w-7 text-primary" />
               </div>
@@ -219,10 +285,10 @@ export function Opportunity() {
                   <span>Business Acumen</span>
                 </li>
               </ul>
-            </div>
+            </div> */}
             
             {/* Track Record */}
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            {/* <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
                 <FaRocket className="h-7 w-7 text-primary" />
               </div>
@@ -249,10 +315,10 @@ export function Opportunity() {
                   <span>Partnerships with KOLs and customers</span>
                 </li>
               </ul>
-            </div>
+            </div> */}
             
             {/* Founder Led */}
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+            {/* <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
                 <FaUserTie className="h-7 w-7 text-primary" />
               </div>
@@ -277,7 +343,7 @@ export function Opportunity() {
               </ul>
             </div>
           </div>
-        </section>
+        </section> */}
         
         {/* CTA Section */}
         <section className="text-center mt-16">

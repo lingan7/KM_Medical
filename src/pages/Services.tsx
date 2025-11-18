@@ -21,21 +21,21 @@ export function Services() {
       description: 'Strategic planning and market analysis for medical device innovation',
       iconSrc: `${BASE}icons/strategy.png`,
       details: [
-        'Product & Technology Roadmaps',
-        'Portfolio Planning',
-        'Competitive Landscape Analysis'
+        'Product & technology roadmaps',
+        'Portfolio planning',
+        'Competitive landscape analysis'
       ]
     },
     {
       title: 'Execution',
-      description: 'End-to-end product development and implementation',
+      description: 'End-to-end product development and launch',
       iconSrc: `${BASE}icons/Product_Development.png`,
       details: [
-        'Front-end innovation concepts and prototypes',
-        'Design, Development and Verification',
+        'Front-end Innovation concepts and prototypes',
+        'Design, Development, and Verification',
         'DFM and Supplier assessments',
-        'DHF (Design History File) Management',
-        'Launch Readiness'
+        'Design history file (DHF) management',
+        'Launch readiness'
       ]
     },
     {
@@ -43,11 +43,11 @@ export function Services() {
       description: 'Streamlining research and development processes',
       iconSrc: `${BASE}icons/R&D_operations.png`,
       details: [
-        'NPD Process Development',
-        'Design and Change Controls',
-        'Project Management',
-        'Engineering Tools Implementation',
-        'Infrastructure Setup'
+        'NPD process development',
+        'Design and change controls',
+        'Project management',
+        'Engineering tools implementation',
+        'Infrastructure setup'
       ]
     },
     {
@@ -55,10 +55,10 @@ export function Services() {
       description: 'Building and developing high-performing teams',
       iconSrc: `${BASE}icons/Talent.png`,
       details: [
-        'R&D Structure Design',
-        'Competency Development',
-        'Team Engagement Strategies',
-        'Professional Development Programs'
+        'R&D structure design',
+        'Competency development',
+        'Team engagement strategies',
+        'Professional development programs'
       ]
     }
   ];
@@ -93,7 +93,7 @@ export function Services() {
 
       {/* Services Section */}
       <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Our services</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {services.map((service, index) => (
             <div 

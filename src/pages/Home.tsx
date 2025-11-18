@@ -40,9 +40,9 @@ export function Home() {
       </section>
 
       {/* Services Preview */}
-      <section className="mb-20 mt-16">
-        <h2 className="text-3xl font-bold text-center mb-12 ml-5">Our Service Categories</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-2 lg:gap-1">
+      <section className="mb-20 mt-16 px-4 sm:px-0">
+        <h2 className="text-3xl font-bold text-center mb-12">Our Service Categories</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-4 max-w-7xl mx-auto px-4 sm:px-6">
           {[
             {
               title: 'Strategy',
@@ -65,8 +65,8 @@ export function Home() {
               iconSrc: `${import.meta.env.BASE_URL}images/talent.png`
             }
           ].map((service, index) => (
-            <div key={index} className={`bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-shadow ${index === 0 ? 'ml-5' : ''} ${index === 3 ? 'mr-5' : ''}`}>
-              <h3 className="text-xl font-semibold mb-3 text-center">{service.title}</h3>
+            <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow h-full flex flex-col items-center text-center">
+              <h3 className="text-xl font-bold mb-3 text-center">{service.title}</h3>
               <div className="mb-3 flex justify-center">
                 <img 
                   src={`${import.meta.env.BASE_URL}images/${service.title.toLowerCase().replace(/\s+/g, '')}.png`}

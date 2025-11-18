@@ -12,7 +12,7 @@ export const Navbar = ({ activeSection }: NavbarProps) => {
   
   const navItems = [
     { id: 'home', label: 'Home', path: '/' },
-    { id: 'about', label: 'About', path: '/about' },
+    { id: 'about', label: 'About Us', path: '/about' },
     { id: 'opportunity', label: 'Opportunity', path: '/opportunity' },
     { id: 'services', label: 'Services', path: '/services' },
     { id: 'contact', label: 'Contact', path: '/contact' },
@@ -30,7 +30,7 @@ export const Navbar = ({ activeSection }: NavbarProps) => {
                 className="h-10 w-auto"
               />
               <span className="ml-3 text-2xl font-bold text-primary hover:text-primary-dark transition-colors hidden sm:inline">
-                KM Medical Device Consulting, LLC
+                KM Medical Device Consulting
               </span>
             </Link>
           </div>

@@ -32,7 +32,7 @@ export function Contact() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16 max-w-4xl">
+    <div className="container mx-auto px-4 py-16 max-w-5xl">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Let's Connect</h1>
         <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
@@ -44,7 +44,7 @@ export function Contact() {
       <div className="bg-white rounded-xl shadow-lg overflow-hidden">
         <div className="md:flex">
           {/* Contact Information */}
-          <div className="md:w-1/2 bg-gray-50 p-8 md:p-12">
+          <div className="md:w-1/2 bg-gray-50 p-6 md:p-8 lg:p-10">
             <h2 className="text-2xl font-bold text-gray-900 mb-8">Contact</h2>
             
             <div className="space-y-8">
@@ -54,9 +54,13 @@ export function Contact() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <h3 className="font-medium text-gray-900 mb-1 text-sm">Email</h3>
-                  <a href="mailto:info@kmmedicaldeviceconsulting.com" className="text-primary hover:text-primary-light transition-colors text-sm">
+                  <a 
+                    href="mailto:info@kmmedicaldeviceconsulting.com" 
+                    className="text-primary hover:text-primary-light transition-colors text-xs sm:text-base"
+                    style={{ wordBreak: 'break-all' }}
+                  >
                     info@kmmedicaldeviceconsulting.com
                   </a>
                 </div>
@@ -69,7 +73,7 @@ export function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-medium text-gray-900 mb-1 text-sm">LinkedIn</h3>
+                  <h3 className="font-medium text-gray-900 mb-1 text-xs">LinkedIn</h3>
                   <a 
                     href="https://linkedin.com/in/kapil-mehra-usa" 
                     target="_blank" 
@@ -83,7 +87,7 @@ export function Contact() {
             </div>
 
             <div className="mt-12">
-              <h3 className="text-lg font-medium text-gray-900 mb-4">Why Connect With Us?</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-4">Why Connect With Us?</h3>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start">
                   <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

@@ -21,13 +21,13 @@ export const Footer = () => {
   return (
     <footer className="bg-primary text-white">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-white">
-              KM Medical Device Consulting, LLC
+              KM Medical Device Consulting
             </h3>
-            <p className="text-gray-200 text-sm leading-relaxed">
+            <p className="text-gray-200 text-sm leading-relaxed text-justify">
               Expert consulting services to help bring innovative medical technologies to market in an efficient and compliant way.
             </p>
             <div className="flex space-x-4 pt-2">
@@ -75,7 +75,7 @@ export const Footer = () => {
               <li className="flex items-start">
                 <FaEnvelope className="flex-shrink-0 h-5 w-5 text-white/80 mt-0.5" />
                 <a href="mailto:info@kmmedicalconsulting.com" className="ml-3 text-white/80 hover:text-white text-sm">
-                  info@kmmedicalconsulting.com
+                  info@kmmedicaldeviceconsulting.com
                 </a>
               </li>
               <li className="flex items-start">
@@ -86,37 +86,13 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-
-          {/* Newsletter */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Stay Updated</h4>
-            <p className="text-white/80 text-sm mb-3">
-              Subscribe to our newsletter for the latest updates and insights.
-            </p>
-            <form className="mt-2">
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="px-4 py-2 w-full rounded-l-lg focus:outline-none focus:ring-2 focus:ring-white/40 text-gray-800 text-sm"
-                  aria-label="Email address"
-                />
-                <button
-                  type="submit"
-                  className="bg-gradient-to-r from-primary to-primary-light text-white px-4 py-2 rounded-r-lg hover:opacity-90 transition-opacity text-sm font-medium"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </form>
-          </div>
         </div>
 
         {/* Copyright */}
         <div className="mt-12 pt-6 border-t border-white/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-white/80 text-xs">
-              &copy; {new Date().getFullYear()} KM Medical Device Consulting, LLC. All rights reserved.
+              &copy; {new Date().getFullYear()} KM Medical Device Consulting. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="https://www.bluehost.com/support/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white text-xs">
