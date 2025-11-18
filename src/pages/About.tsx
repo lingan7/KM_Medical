@@ -1,4 +1,4 @@
-import { FaRocket, FaAward, FaUserTie, FaCogs } from 'react-icons/fa';
+import { FaRocket, FaAward, FaUserTie } from 'react-icons/fa';
 
 export function About() {
   return (

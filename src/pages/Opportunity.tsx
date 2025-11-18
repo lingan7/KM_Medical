@@ -1,4 +1,4 @@
-import { FaShieldAlt, FaLightbulb, FaRocket, FaCogs, FaUserTie, FaChartBar, FaFileAlt, FaCheckCircle, FaTrophy } from 'react-icons/fa';
+import { FaShieldAlt, FaRocket, FaCogs, FaChartBar, FaFileAlt, FaCheckCircle, FaTrophy } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 export function Opportunity() {
