@@ -1,4 +1,4 @@
-import { FaShieldAlt, FaRocket, FaCogs, FaChartBar, FaFileAlt, FaCheckCircle, FaTrophy } from 'react-icons/fa';
+import { FaHandshake, FaCheck, FaAward, FaFileAlt, FaChartBar, FaCogs, FaShieldAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 export function Opportunity() {
@@ -7,77 +7,21 @@ export function Opportunity() {
       <div className="max-w-5xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-12">The Opportunity</h1>
         
-        {/* The Challenge Section */}
+        {/* Main Content Section */}
         <section className="mb-20 bg-white rounded-xl shadow-lg p-8">
-          {/* <h2 className="text-2xl font-semibold mb-6 text-gray-900">
-            Medical Device Product Development with FDA Clearance
-          </h2>
-           */}
           <div className="space-y-6">
-            {/* <div className="flex items-start">
-              <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
-                <FaShieldAlt className="h-5 w-5" />
-              </div>
-              <div className="ml-3">
-                <p className="text-gray-700">
-                  <span className="font-medium">Must meet CFR/ISO requirements</span> - Ensuring compliance with all regulatory standards and guidelines.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-start">
-              <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
-                <FaChartBar className="h-5 w-5" />
-              </div>
-              <div className="ml-3">
-                <p className="text-gray-700">
-                  <span className="font-medium">Must show objective evidence of outputs</span> - Documented proof of all development stages and validations.
-                </p>
-              </div>
-            </div>
-            
-            <div className="flex items-start">
-              <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
-                <FaCogs className="h-5 w-5" />
-              </div>
-              <div className="ml-3">
-                <p className="text-gray-700">
-                  <span className="font-medium">Must follow the product development process</span> stated in the QMS for consistent quality and compliance.
-                </p>
-              </div>
-            </div> */}
-            
-            {/* <div className="mt-8 p-4 bg-gray-50 rounded-lg border-l-4 border-primary">
-              <p className="text-gray-800 font-medium">
-                Entails risk and takes considerable time, expenses, and resources.
-              </p>
-            </div> */}
-            
-            {/* Challenge Section */}
-            <section className="mb-16 bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-3xl font-bold mb-8 text-gray-900">Challenge</h2>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
-                {/* Left Column - Challenge Items */}
-                <div className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
+              {/* Solution Section */}
+              <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg h-full border border-gray-200">
+                <h3 className="text-2xl font-bold mb-6 text-gray-800">Solution</h3>
+                <div className="space-y-4">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
-                      <FaShieldAlt className="h-5 w-5" />
+                      <FaHandshake className="h-5 w-5" />
                     </div>
                     <div className="ml-3">
                       <p className="text-gray-700 text-lg">
-                        <span className="font-medium">FDA approved Medical Device</span>
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
-                      <FaFileAlt className="h-5 w-5" />
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-gray-700 text-lg">
-                        <span className="font-medium">Must meet CFR/ISO requirements</span>
+                        Engage an experienced, knowledgeable, and trusted advisor
                       </p>
                     </div>
                   </div>
@@ -88,30 +32,41 @@ export function Opportunity() {
                     </div>
                     <div className="ml-3">
                       <p className="text-gray-700 text-lg">
-                        <span className="font-medium">Must show objective evidence of outputs</span>
+                        Strategically manage costs, time-to-market, quality, and risk profile
                       </p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
-                      <FaCogs className="h-5 w-5" />
+                  <div className="mt-10">
+                    <h3 className="text-2xl font-bold mb-6 text-gray-800">Result</h3>
+                    <div className="space-y-4">
+                      <div className="flex items-start">
+                        <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
+                          <FaCheck className="h-5 w-5" />
+                        </div>
+                        <div className="ml-3">
+                          <p className="text-gray-700 text-lg">
+                            Successful execution and launch
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
+                          <FaAward className="h-5 w-5" />
+                        </div>
+                        <div className="ml-3">
+                          <p className="text-gray-700 text-lg">
+                            Meet customer and business expectations
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="ml-3">
-                      <p className="text-gray-700 text-lg">
-                        <span className="font-medium">Must follow the development process per the QMS</span>
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-8 p-4 bg-gray-50 rounded-lg border-l-4 border-primary">
-                    <p className="text-gray-800 font-medium text-lg">
-                      Journey entails risk, time, expenses, and resources.
-                    </p>
                   </div>
                 </div>
-                
-                {/* Right Column - Block Diagram */}
+              </div>
+
+              {/* Block Diagram Section */}
+              <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg h-full border border-gray-200">
                 <div className="flex justify-center items-center h-full min-h-[350px]">
                   <div className="w-full max-w-md">
                     <div className="space-y-4">
@@ -183,71 +138,67 @@ export function Opportunity() {
                   </div>
                 </div>
               </div>
-            </section>
-            
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-stretch">
-              {/* Solution Section */}
-              <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg h-full border border-gray-200">
-                <h3 className="text-2xl font-bold mb-6 text-gray-800">Solution</h3>
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
-                      <FaRocket className="h-5 w-5" />
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-gray-700 text-lg">
-                        Engage an experienced, knowledgeable, and trusted advisor
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
-                      <FaShieldAlt className="h-5 w-5" />
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-gray-700 text-lg">
-                        Strategically manage costs, time-to-market, quality, and risk profile
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="mt-10">
-                    <h3 className="text-2xl font-bold mb-4 mt-20 text-gray-800">Result</h3>
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
-                      <FaCheckCircle className="h-5 w-5" />
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-gray-700 text-lg">
-                        Successful execution and launch
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
-                      <FaTrophy className="h-5 w-5" />
-                    </div>
-                    <div className="ml-3">
-                      <p className="text-gray-700 text-lg">
-                        Meet customer and business expectations
-                      </p>
-                    </div>
-                  </div>
-                  </div>
-                </div>
-              </div>
+            </div>
+          </div>
+        </section>
 
-              {/* Solution Image Section */}
-              <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg h-full border border-gray-200">
-                <div className="flex justify-center items-center h-full">
-                  <img 
-                    src={`${import.meta.env.BASE_URL}images/FDA_Approved.png`} 
-                    alt="FDA Approved" 
-                    className="max-w-full h-auto rounded-lg shadow-md"
-                  />
+        {/* Challenge Section */}
+        <section className="mb-16 bg-white rounded-xl shadow-lg p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-start">
+            {/* Left Column - Challenge Items */}
+            <div className="space-y-6">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-primary mb-3">FDA approved Medical Device</h3>
+                <div className="w-16 h-1 bg-primary rounded-full"></div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
+                  <FaFileAlt className="h-5 w-5" />
+                </div>
+                <div className="ml-3">
+                  <p className="text-gray-700 text-lg">
+                    <span className="font-medium">Must meet CFR/ISO requirements</span>
+                  </p>
                 </div>
               </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
+                  <FaChartBar className="h-5 w-5" />
+                </div>
+                <div className="ml-3">
+                  <p className="text-gray-700 text-lg">
+                    <span className="font-medium">Must show objective evidence of outputs</span>
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0 h-6 w-6 text-primary mt-1">
+                  <FaCogs className="h-5 w-5" />
+                </div>
+                <div className="ml-3">
+                  <p className="text-gray-700 text-lg">
+                    <span className="font-medium">Must follow the development process per the QMS</span>
+                  </p>
+                </div>
+              </div>
+              
+              <div className="mt-8 p-4 bg-gray-50 rounded-lg border-l-4 border-primary">
+                <p className="text-gray-800 font-medium text-lg">
+                  Journey entails risk, time, expenses, and resources.
+                </p>
+              </div>
+            </div>
+            
+            {/* Right Column - FDA Approved Image */}
+            <div className="flex justify-center items-center h-full">
+              <img 
+                src={`${import.meta.env.BASE_URL}images/FDA_Approved.png`} 
+                alt="FDA Approved" 
+                className="max-w-full h-auto rounded-lg shadow-md"
+              />
             </div>
           </div>
         </section>
