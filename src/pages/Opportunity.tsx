@@ -1,4 +1,4 @@
-import { FaHandshake, FaCheck, FaAward, FaFileAlt, FaChartBar, FaCogs, FaShieldAlt } from 'react-icons/fa';
+import { FaHandshake, FaCheck, FaAward, FaFileAlt, FaChartBar, FaCogs } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 export function Opportunity() {
