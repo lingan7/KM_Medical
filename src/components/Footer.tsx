@@ -10,13 +10,7 @@ export const Footer = () => {
     { id: 'contact', label: 'Contact', path: '/contact' },
   ] as const;
 
-  const socialLinks = [
-    {
-      name: 'LinkedIn',
-      href: 'https://linkedin.com/in/kapil-mehra-usa',
-      icon: FaLinkedin,
-    },
-  ];
+  const linkedinUrl = 'https://linkedin.com/in/kapil-mehra-usa/';
 
   return (
     <footer className="bg-primary text-white">
@@ -27,22 +21,10 @@ export const Footer = () => {
             <h3 className="text-xl font-bold text-white">
               KM Medical Device Consulting
             </h3>
-            <p className="text-gray-200 text-sm leading-relaxed text-justify">
-              Expert consulting services to help bring innovative medical technologies to market in an efficient and compliant way.
-            </p>
-            <div className="flex space-x-4 pt-2">
-              {socialLinks.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white transition-colors duration-200"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-5 w-5" aria-hidden="true" />
-                </a>
-              ))}
+            <div className="max-w-[300px]">
+              <p className="text-gray-200 text-sm leading-relaxed text-justify">
+                Expert consulting services to help bring innovative medical technologies to market in an efficient and compliant way.
+              </p>
             </div>
           </div>
 
@@ -82,6 +64,17 @@ export const Footer = () => {
                 <FaPhone className="flex-shrink-0 h-5 w-5 text-white/80 mt-0.5" />
                 <a href="tel:+1234567890" className="ml-3 text-white/80 hover:text-white text-sm">
                   +1 (616) 821-1996
+                </a>
+              </li>
+              <li className="flex items-start">
+                <FaLinkedin className="flex-shrink-0 h-5 w-5 text-white/80 mt-0.5" />
+                <a 
+                  href={linkedinUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="ml-3 text-white/80 hover:text-white text-sm flex items-center"
+                >
+                  linkedin.com/in/kapil-mehra-usa
                 </a>
               </li>
             </ul>

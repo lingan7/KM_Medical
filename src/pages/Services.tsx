@@ -6,7 +6,7 @@ export function Services() {
   const headerBox = (
     <div className="bg-primary p-8 md:p-10 rounded-2xl shadow-lg mb-12 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10" aria-hidden="true"></div>
-      <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <h1 className="text-3xl md:text-3xl font-bold text-white mb-4">
         Fractional Leadership and Expert Guidance
       </h1>
       <p className="text-xl text-white/90">
@@ -27,7 +27,7 @@ export function Services() {
       ]
     },
     {
-      title: 'Execution',
+      title: 'Product development',
       description: 'End-to-end product development and launch',
       iconSrc: `${BASE}icons/Product_Development.png`,
       details: [
@@ -87,13 +87,13 @@ export function Services() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-16 max-w-6xl">
+    <div className="container mx-auto px-4 py-16 max-w-5xl">
       {/* Header Box */}
       {headerBox}
 
       {/* Services Section */}
       <section className="mb-20">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Our services</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {services.map((service, index) => (
             <div 
@@ -139,7 +139,7 @@ export function Services() {
                   className="w-40 h-40 object-contain mb-4 rounded-2xl"
                   onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                 />
-                <h3 className="text-2xl font-bold text-gray-800 text-center">{item.title}</h3>
+                <h3 className="text-2xl font-semibold text-gray-800 text-center">{item.title}</h3>
               </div>
             </div>
           ))}
@@ -155,7 +155,7 @@ export function Services() {
           to="/contact" 
           className="bg-primary hover:bg-primary-light text-white font-medium py-3 px-8 rounded-lg transition duration-300 inline-block"
         >
-          Contact Us Today
+          Contact Us
         </Link>
       </div>
     </div>

@@ -1,4 +1,125 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Select from 'react-select';
+import { ActionMeta, SingleValue } from 'react-select';
+import { emailjsConfig } from '../config/emailjs';
+
+interface SelectProps {
+  options: { value: string; label: string }[];
+  value: string;
+  onChange: (value: string) => void;
+  placeholder?: string;
+  className?: string;
+}
+
+const CustomSelect = ({ 
+  options, 
+  value, 
+  onChange, 
+  placeholder = 'Select an option',
+  className = ''
+}: SelectProps) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleChange = (
+    newValue: SingleValue<{ value: string; label: string }>,
+    actionMeta: ActionMeta<{ value: string; label: string }>
+  ) => {
+    if (newValue) {
+      onChange(newValue.value);
+    }
+  };
+
+  const selectedOption = options.find(option => option.value === value);
+
+  return (
+    <div className={`w-full ${className}`}>
+      <Select
+        value={selectedOption}
+        onChange={handleChange}
+        options={options}
+        placeholder={placeholder}
+        className="react-select-container"
+        classNamePrefix="react-select"
+        isSearchable={false}
+        unstyled
+        styles={{
+          control: (base) => ({
+            ...base,
+            minHeight: '44px',
+            boxShadow: 'none',
+            '&:hover': {
+              borderColor: '#9ca3af',
+            },
+          }),
+          menu: (base) => ({
+            ...base,
+            marginTop: '4px',
+            borderRadius: '0.5rem',
+            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+          }),
+          option: (base, { isFocused, isSelected }) => ({
+            ...base,
+            backgroundColor: isSelected
+              ? '#1b4a5f'
+              : isFocused
+              ? 'rgba(27, 74, 95, 0.1)'
+              : 'white',
+            color: isSelected ? 'white' : 'var(--text-primary, #1f2937)',
+            '&:active': {
+              backgroundColor: isSelected ? 'var(--primary-600, #1b4a5f)' : 'var(--gray-100, #f3f4f6)',
+            },
+          }),
+        }}
+        classNames={{
+          control: () =>
+            'w-full flex items-center justify-between px-4 py-2.5 text-left bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1b4a5f]/50 focus:border-[#1b4a5f] transition-all duration-200 hover:border-[#1b4a5f]',
+          menu: () => 'bg-white rounded-lg border border-gray-200 mt-1',
+          option: (state) => 
+            `px-4 py-2 cursor-pointer transition-colors ${
+              state.isSelected 
+                ? 'bg-[#1b4a5f] text-white hover:bg-[#1a3f4f]' 
+                : 'hover:bg-gray-100'}`,
+          menuList: () => 'p-1',
+          singleValue: () => 'text-gray-900',
+          placeholder: () => 'text-gray-400',
+          dropdownIndicator: () => 'text-gray-400',
+          indicatorSeparator: () => 'bg-gray-300 mx-2 h-5 w-px',
+        }}
+      />
+
+      {isOpen && (
+        <ul 
+          className="absolute z-10 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg max-h-60 overflow-auto focus:outline-none"
+          role="listbox"
+          tabIndex={-1}
+        >
+          {options.map((option) => (
+            <li
+              key={option.value}
+              className={`px-4 py-2.5 transition-colors duration-200 ${
+                value === option.value 
+                  ? 'bg-[#1b4a5f] text-white font-medium' 
+                  : 'text-gray-700 hover:bg-[#1b4a5f]/10'
+              } cursor-pointer`}
+              onClick={() => {
+                onChange(option.value);
+                setIsOpen(false);
+              }}
+              role="option"
+              aria-selected={value === option.value}
+            >
+              {option.label}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+};
+
+export default CustomSelect;
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -8,6 +129,7 @@ export function Contact() {
     subject: 'General Inquiry',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -17,22 +139,81 @@ export function Contact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission (e.g., send to an API)
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      subject: 'General Inquiry',
-      message: ''
-    });
+    
+    // Basic form validation
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      toast.error('Please fill in all required fields');
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast.error('Please enter a valid email address');
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const { serviceId, templateId, publicKey, toEmail } = emailjsConfig;
+
+      // Validate that all required EmailJS config values are set
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration is incomplete. Please check your config file.');
+      }
+
+      const templateParams = {
+        from_name: formData.name.trim(),
+        from_email: formData.email.trim(),
+        subject: formData.subject,
+        message: formData.message.trim(),
+        company: formData.company.trim() || 'Not provided',
+        user_email: formData.email.trim(), // Add this to use in the template
+        user_name: formData.name.trim()    // Add this to use in the template
+      };
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+
+      toast.success('Your message has been sent successfully! We\'ll get back to you soon.');
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        subject: 'General Inquiry',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Failed to send message';
+      toast.error(`Error: ${errorMessage}`);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div className="container mx-auto px-4 py-16 max-w-5xl">
+      <ToastContainer 
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Let's Connect</h1>
         <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
@@ -112,7 +293,7 @@ export function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="md:w-1/2 p-12">
+          <div className="md:w-1/2 p-8 md:p-10">
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">Send Us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
@@ -124,7 +305,7 @@ export function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#1b4a5f] focus:border-[#1b4a5f] focus:ring-2 focus:ring-opacity-50 transition-colors duration-200"
                 />
               </div>
 
@@ -137,7 +318,7 @@ export function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#1b4a5f] focus:border-[#1b4a5f] focus:ring-2 focus:ring-opacity-50 transition-colors duration-200"
                 />
               </div>
 
@@ -149,23 +330,72 @@ export function Contact() {
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#1b4a5f] focus:border-[#1b4a5f] focus:ring-2 focus:ring-opacity-50 transition-colors duration-200"
                 />
               </div>
 
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject *</label>
-                <select
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
-                >
-                  <option value="General Inquiry">General Inquiry</option>
-                  <option value="Product Development">Product Development</option>
-                  <option value="Other">Other</option>
-                </select>
+                <Select
+                  value={formData.subject ? { value: formData.subject, label: formData.subject } : null}
+                  onChange={(selectedOption) => {
+                    setFormData({ 
+                      ...formData, 
+                      subject: selectedOption?.value || '' 
+                    });
+                  }}
+                  options={[
+                    { value: 'General Inquiry', label: 'General Inquiry' },
+                    { value: 'Strategy', label: 'Strategy' },
+                    { value: 'Product Development', label: 'Product Development' },
+                    { value: 'R&D Operations', label: 'R&D Operations' },
+                    { value: 'Talent', label: 'Talent' }
+                  ]}
+                  placeholder="Select a subject"
+                  className="w-full text-left"
+                  classNamePrefix="select"
+                  styles={{
+                    control: (base) => ({
+                      ...base,
+                      minHeight: '44px',
+                      borderColor: '#d1d5db',
+                      '&:hover': {
+                        borderColor: '#9ca3af',
+                      },
+                      '&:focus-within': {
+                        borderColor: '#1b4a5f',
+                        boxShadow: '0 0 0 2px rgba(27, 74, 95, 0.2)',
+                      },
+                    }),
+                    option: (base, { isSelected, isFocused }) => ({
+                      ...base,
+                      backgroundColor: isSelected 
+                        ? '#1b4a5f' 
+                        : isFocused 
+                        ? 'rgba(27, 74, 95, 0.1)' 
+                        : 'white',
+                      color: isSelected ? 'white' : '#1f2937',
+                      '&:active': {
+                        backgroundColor: isSelected ? '#1b4a5f' : 'rgba(27, 74, 95, 0.1)',
+                      },
+                    }),
+                    singleValue: (base) => ({
+                      ...base,
+                      color: '#1f2937',
+                    }),
+                  }}
+                  theme={(theme) => ({
+                    ...theme,
+                    colors: {
+                      ...theme.colors,
+                      primary: '#1b4a5f',
+                      primary25: 'rgba(27, 74, 95, 0.1)',
+                      primary50: 'rgba(27, 74, 95, 0.2)',
+                      neutral20: '#d1d5db',
+                      neutral30: '#9ca3af',
+                    },
+                  })}
+                />
               </div>
 
               <div>
@@ -177,16 +407,27 @@ export function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-[#1b4a5f] focus:border-[#1b4a5f] focus:ring-2 focus:ring-opacity-50 transition-colors duration-200"
                 ></textarea>
               </div>
 
               <div>
                 <button
                   type="submit"
-                  className="w-full bg-primary text-white py-3 px-6 rounded-md hover:bg-primary-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors"
+                  disabled={isSubmitting}
+                  className={`w-full bg-primary hover:bg-primary-dark text-white font-medium py-3 px-6 rounded-lg transition-colors ${
+                    isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                  }`}
                 >
-                  Send Message
+                  {isSubmitting ? (
+                    <span className="flex items-center justify-center">
+                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Sending...
+                    </span>
+                  ) : 'Send Message'}
                 </button>
               </div>
             </form>

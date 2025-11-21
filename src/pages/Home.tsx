@@ -13,7 +13,7 @@ export function Home() {
           />
           <div className="absolute inset-0 bg-black/40"></div>
           <div className="absolute inset-0 flex items-center justify-center px-4 py-8 md:px-12 md:py-20">
-            <div className="max-w-4xl mx-auto text-center text-white">
+            <div className="max-w-5xl mx-auto text-center text-white">
               <h1 className="text-3xl md:text-6xl font-bold mb-4 md:mb-8 text-white">
                 Transforming Medical Innovations into Market Success
               </h1>
@@ -51,17 +51,17 @@ export function Home() {
             },
             {
               title: 'Product Development',
-              description: 'Development & Execution',
+              description: 'Idea to Launch',
               iconSrc: `${import.meta.env.BASE_URL}images/productdevelopment.png`
             },
             {
               title: 'R&D Operations',
-              description: 'Processes, Tools, Infrastructure',
+              description: 'Processes & tools',
               iconSrc: `${import.meta.env.BASE_URL}images/randdoperations.png`
             },
             {
               title: 'Talent',
-              description: 'Competencies, Partnerships',
+              description: 'Competencies, partnerships',
               iconSrc: `${import.meta.env.BASE_URL}images/talent.png`
             }
           ].map((service, index) => (
@@ -82,8 +82,8 @@ export function Home() {
       </section>
 
       {/* About Preview */}
-      <section className="bg-gray-50 p-12 rounded-2xl mb-20">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="bg-gray-50 p-12 rounded-2xl mb-8">
+        <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">About KM Medical Device Consulting</h2>
           <p className="text-lg text-gray-700 mb-8">
             With years of experience in the medical device industry, we provide comprehensive consulting services 
@@ -92,16 +92,15 @@ export function Home() {
           <Link 
             to="/about" 
             className="text-primary hover:text-primary-light font-medium inline-flex items-center"
-          >
-            Learn more about us<svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            >
+            Learn more about us<svg className="w-4 h-4 ml-2 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </Link>
         </div>
       </section>
-
       {/* CTA Section */}
-      <section className="text-center py-8">
+      <section className="text-center pt-4 pb-8">
         <h2 className="text-3xl font-bold mb-6">Ready to accelerate your medical device development?</h2>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
           Contact us today to discuss how we can support your medical device journey.
