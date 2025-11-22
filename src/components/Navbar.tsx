@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 type Section = 'home' | 'about' | 'opportunity' | 'services' | 'contact';
@@ -9,6 +9,30 @@ interface NavbarProps {
 
 export const Navbar = ({ activeSection }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // Close menu when clicking outside or scrolling
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    const handleScroll = () => {
+      setIsOpen(false);
+    };
+
+    // Add event listeners
+    document.addEventListener('mousedown', handleClickOutside);
+    window.addEventListener('scroll', handleScroll, true);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      window.removeEventListener('scroll', handleScroll, true);
+    };
+  }, []);
   
   const navItems = [
     { id: 'home', label: 'Home', path: '/' },
@@ -19,7 +43,7 @@ export const Navbar = ({ activeSection }: NavbarProps) => {
   ] as const;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100">
+    <nav ref={menuRef} className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:pr-6 lg:pr-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center space-x-3">

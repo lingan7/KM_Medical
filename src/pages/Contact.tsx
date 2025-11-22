@@ -3,7 +3,7 @@ import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Select from 'react-select';
-import { ActionMeta, SingleValue } from 'react-select';
+import { SingleValue } from 'react-select';
 import { emailjsConfig } from '../config/emailjs';
 
 interface SelectProps {
@@ -23,8 +23,7 @@ const CustomSelect = ({
 }: SelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleChange = (
-    newValue: SingleValue<{ value: string; label: string }>,
-    actionMeta: ActionMeta<{ value: string; label: string }>
+    newValue: SingleValue<{ value: string; label: string }>
   ) => {
     if (newValue) {
       onChange(newValue.value);
@@ -158,7 +157,7 @@ export function Contact() {
     setIsSubmitting(true);
 
     try {
-      const { serviceId, templateId, publicKey, toEmail } = emailjsConfig;
+      const { serviceId, templateId, publicKey } = emailjsConfig;
 
       // Validate that all required EmailJS config values are set
       if (!serviceId || !templateId || !publicKey) {
