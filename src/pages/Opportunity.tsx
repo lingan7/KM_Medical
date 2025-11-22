@@ -86,7 +86,9 @@ export function Opportunity() {
                       
                       {/* Arrow */}
                       <div className="flex justify-center opacity-0 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                        <div className="w-0.5 h-4 bg-[#a6a6a6]"></div>
+                        <svg className="w-6 h-6 text-[#a6a6a6]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
                       </div>
                       
                       {/* Stage 2 */}
@@ -100,7 +102,9 @@ export function Opportunity() {
                       
                       {/* Arrow */}
                       <div className="flex justify-center opacity-0 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-                        <div className="w-0.5 h-6 bg-[#a6a6a6]"></div>
+                        <svg className="w-6 h-6 text-[#a6a6a6]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
                       </div>
                       
                       {/* Stage 3 */}
@@ -114,7 +118,9 @@ export function Opportunity() {
                       
                       {/* Arrow */}
                       <div className="flex justify-center opacity-0 animate-fade-in" style={{ animationDelay: '0.9s' }}>
-                        <div className="w-0.5 h-6 bg-[#a6a6a6]"></div>
+                        <svg className="w-6 h-6 text-[#a6a6a6]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
                       </div>
                       
                       {/* Stage 4 */}
@@ -128,7 +134,9 @@ export function Opportunity() {
                       
                       {/* Arrow */}
                       <div className="flex justify-center opacity-0 animate-fade-in" style={{ animationDelay: '1.2s' }}>
-                        <div className="w-0.5 h-6 bg-[#a6a6a6]"></div>
+                        <svg className="w-6 h-6 text-[#a6a6a6]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
                       </div>
                       
                       {/* Stage 5 */}

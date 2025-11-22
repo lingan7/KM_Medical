@@ -48,7 +48,7 @@ export function About() {
           <div className="md:w-2/3 p-8">
             <h2 className="text-2xl font-medium mb-4 text-gray-800">Kapil Mehra, MS ME | MBA</h2>
             <p className="text-lg font-medium text-primary mb-4">Founder & Principal Consultant, KM Medical Device Consulting</p>
-            <p className="text-gray-700 leading-relaxed text-justify">
+            <p className="text-gray-700 leading-relaxed text-left">
               20 years in a F100 MedTech company leading R&D and product development for Class I & II devices—from concept to FDA clearance and commercialization. Kapil partners with startups and emerging MedTech firms to accelerate design, meet regulatory expectations, and bring commercially viable devices to market.​
             </p>
           </div>
