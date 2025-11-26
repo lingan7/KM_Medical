@@ -56,13 +56,16 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <FaEnvelope className="flex-shrink-0 h-5 w-5 text-white/80 mt-0.5" />
-                <a href="mailto:info@kmmedicalconsulting.com" className="ml-3 text-white/80 hover:text-white text-sm">
+                <a 
+                  href="mailto:info@kmmedicaldeviceconsulting.com" 
+                  className="ml-3 text-white/80 hover:text-white text-sm break-words w-full"
+                >
                   info@kmmedicaldeviceconsulting.com
                 </a>
               </li>
               <li className="flex items-start">
                 <FaPhone className="flex-shrink-0 h-5 w-5 text-white/80 mt-0.5" />
-                <a href="tel:+1234567890" className="ml-3 text-white/80 hover:text-white text-sm">
+                <a href="tel:+16168211996" className="ml-3 text-white/80 hover:text-white text-sm">
                   +1 (616) 821-1996
                 </a>
               </li>
