@@ -31,9 +31,9 @@ export function About() {
           <div className="md:w-1/3 p-6 flex items-center justify-center">
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-primary/40 rounded-full blur-sm group-hover:blur-md transition-all duration-300"></div>
-              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl">
+              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-black shadow-xl">
                 <img 
-                  src={`${import.meta.env.BASE_URL}images/kapil-mehra.png`} 
+                  src={`${import.meta.env.BASE_URL}images/Kapil_Mehra.jfif`} 
                   alt="Kapil Mehra" 
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   onError={(e) => {

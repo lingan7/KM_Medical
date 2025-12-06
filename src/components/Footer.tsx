@@ -57,15 +57,45 @@ export const Footer = () => {
               <li className="flex items-start">
                 <FaEnvelope className="flex-shrink-0 h-5 w-5 text-white/80 mt-0.5" />
                 <a 
-                  href="mailto:info@kmmedicaldeviceconsulting.com" 
-                  className="ml-3 text-white/80 hover:text-white text-sm break-words w-full"
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const email = 'info@kmmedicaldeviceconsulting.com';
+                    try {
+                      // Create a temporary input element to copy the email
+                      const tempInput = document.createElement('input');
+                      tempInput.value = email;
+                      document.body.appendChild(tempInput);
+                      tempInput.select();
+                      document.execCommand('copy');
+                      document.body.removeChild(tempInput);
+                      
+                      // Open default mail client
+                      window.location.href = `mailto:${email}`;
+                    } catch (err) {
+                      // If clipboard API fails, just open the mail client
+                      window.location.href = `mailto:${email}`;
+                    }
+                  }}
+                  className="ml-3 text-white/80 hover:text-white text-sm break-words w-full cursor-pointer"
+                  title="Click to copy email address"
                 >
                   info@kmmedicaldeviceconsulting.com
                 </a>
               </li>
               <li className="flex items-start">
                 <FaPhone className="flex-shrink-0 h-5 w-5 text-white/80 mt-0.5" />
-                <a href="tel:+16168211996" className="ml-3 text-white/80 hover:text-white text-sm">
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                      window.location.href = 'tel:+16168211996';
+                    } else {
+                      e.preventDefault();
+                    }
+                  }}
+                  className="ml-3 text-white/80 hover:text-white text-sm"
+                >
                   +1 (616) 821-1996
                 </a>
               </li>
