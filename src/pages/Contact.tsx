@@ -240,6 +240,10 @@ export function Contact() {
                     href="mailto:info@kmmedicaldeviceconsulting.com" 
                     className="text-primary hover:text-primary-light transition-colors text-xs sm:text-base"
                     style={{ wordBreak: 'break-all' }}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.location.href = 'mailto:info@kmmedicaldeviceconsulting.com';
+                    }}
                   >
                     info@kmmedicaldeviceconsulting.com
                   </a>

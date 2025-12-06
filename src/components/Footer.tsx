@@ -57,28 +57,12 @@ export const Footer = () => {
               <li className="flex items-start">
                 <FaEnvelope className="flex-shrink-0 h-5 w-5 text-white/80 mt-0.5" />
                 <a 
-                  href="#"
+                  href="mailto:info@kmmedicaldeviceconsulting.com"
                   onClick={(e) => {
                     e.preventDefault();
-                    const email = 'info@kmmedicaldeviceconsulting.com';
-                    try {
-                      // Create a temporary input element to copy the email
-                      const tempInput = document.createElement('input');
-                      tempInput.value = email;
-                      document.body.appendChild(tempInput);
-                      tempInput.select();
-                      document.execCommand('copy');
-                      document.body.removeChild(tempInput);
-                      
-                      // Open default mail client
-                      window.location.href = `mailto:${email}`;
-                    } catch (err) {
-                      // If clipboard API fails, just open the mail client
-                      window.location.href = `mailto:${email}`;
-                    }
+                    window.location.href = 'mailto:info@kmmedicaldeviceconsulting.com';
                   }}
                   className="ml-3 text-white/80 hover:text-white text-sm break-words w-full cursor-pointer"
-                  title="Click to copy email address"
                 >
                   info@kmmedicaldeviceconsulting.com
                 </a>
