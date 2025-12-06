@@ -1,7 +1,7 @@
 // EmailJS configuration
 export const emailjsConfig = {
-  serviceId: 'service_cq1hnij',
-  templateId: 'template_16fqwkq',
-  publicKey: 'L8J8r-n5yJ33AEj_5',
-  toEmail: 'lingamuthu.kalyanasundaram@wmich.edu'
+  serviceId: 'service_gqukxhd',
+  templateId: 'template_nglsold',
+  publicKey: 'vjgX-jvWrFHK3_9qM',
+  toEmail: 'info@kmmedicaldeviceconsulting.com'
 };

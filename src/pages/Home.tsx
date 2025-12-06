@@ -61,7 +61,7 @@ export function Home() {
             },
             {
               title: 'Talent',
-              description: 'Competencies, partnerships',
+              description: 'Competencies & partnerships',
               iconSrc: `${import.meta.env.BASE_URL}images/talent.png`
             }
           ].map((service, index) => (
