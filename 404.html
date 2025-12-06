@@ -2,14 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="images/km-logo-white.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KM Medical Device Consulting LLC</title>
-    <script type="module" crossorigin src="/assets/index-07551946.js"></script>
-    <link rel="stylesheet" href="/assets/index-3985eadd.css">
+    <title>Redirecting...</title>
+    <script>
+      // Single Page Apps for GitHub Pages
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </head>
   <body>
-    <div id="root"></div>
-    
+    <script>
+      // This script will run when the 404 page is loaded
+      // It will redirect to the index.html with the current path
+      const path = window.location.pathname;
+      sessionStorage.redirect = path;
+      window.location.href = '/' + path.split('/').filter(Boolean).join('/');
+    </script>
+    <p>Redirecting to the home page...</p>
   </body>
 </html>
