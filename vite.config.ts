@@ -4,9 +4,7 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // This is set to work with GitHub Pages at the root domain
-  // base: '/',
-  base: process.env.VITE_APP_BASE ?? '/',  // 👈 key line
+  base: process.env.VITE_APP_BASE ?? '/',
   server: {
     port: 5173,
     open: true

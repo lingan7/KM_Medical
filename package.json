@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "build:gh": "tsc &&VITE_APP_BASE=/KM_Medical/ vite build", 
+    "build:gh": "tsc && VITE_APP_BASE=/KM_Medical/ vite build", 
     "preview": "vite preview",
     "predeploy": "npm run build:gh",
     "deploy": "gh-pages -d dist"
