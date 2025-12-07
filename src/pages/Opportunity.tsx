@@ -7,7 +7,7 @@ export function Opportunity() {
       {/* Header section with styled box */}
       <div className="bg-primary p-8 md:p-10 rounded-2xl shadow-lg mb-6 relative overflow-hidden">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-            Strategic management of quality, cost, risk, and timelines          
+            Strategic Management of Quality, Cost, and Timelines          
           </h2>
           <p className="text-xl text-white/90">
             To make the innovation journey successful
