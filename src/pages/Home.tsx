@@ -51,7 +51,7 @@ export function Home() {
             },
             {
               title: 'Product Development',
-              description: 'Idea to Launch',
+              description: 'Idea to launch',
               iconSrc: `${import.meta.env.BASE_URL}images/productdevelopment.png`
             },
             {
