@@ -8,7 +8,7 @@ export function About() {
       <div className="bg-primary p-8 md:p-10 rounded-2xl shadow-lg mb-6 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10" aria-hidden="true"></div>
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-2 text-left">
-          Experienced, Collaborative, and Trusted partners       
+          Experienced, Collaborative, and Trusted Partners       
         </h2>
         <p className="text-xl text-white/90 text-left">
           Who are There for You
