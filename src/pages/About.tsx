@@ -89,28 +89,28 @@ export function About() {
         <h2 className="text-3xl font-bold text-center mb-12">Why engage with us</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {/* Efficiency */}
+            {/* Leadership */}
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <FaRocket className="h-7 w-7 text-primary" />
+                <FaUserTie className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-center mb-4">Efficient Execution</h3>
+              <h3 className="text-xl font-semibold text-center mb-4">Founder-led</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Speed to market</span>
+                  <span>Proven track record</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Cost-effective solutions</span>
+                  <span>Collaborative approach</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Optimized processes</span>
+                  <span>Direct access to founder</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Strong partner network</span>
+                  <span>Flexible engagement models</span>
                 </li>
               </ul>
             </div>
@@ -141,28 +141,28 @@ export function About() {
               </ul>
             </div>
             
-            {/* Leadership */}
+            {/* Efficiency */}
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
               <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4 mx-auto">
-                <FaUserTie className="h-7 w-7 text-primary" />
+                <FaRocket className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-center mb-4">Founder-led</h3>
+              <h3 className="text-xl font-semibold text-center mb-4">Efficient Execution</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Proven track record</span>
+                  <span>Speed to market</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Collaborative approach</span>
+                  <span>Cost-effective solutions</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Direct access to founder</span>
+                  <span>Optimized processes</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Flexible engagement models</span>
+                  <span>Strong partner network</span>
                 </li>
               </ul>
             </div>
