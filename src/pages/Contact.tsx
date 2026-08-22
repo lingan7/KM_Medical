@@ -217,7 +217,7 @@ export function Contact() {
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Let's Connect</h1>
         <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Get in touch with us for expert medical device consulting services
+          Get in touch with us for a 30 minute complimentary discovery call to explore potential engagement
         </p>
       </div>
 

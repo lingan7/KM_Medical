@@ -14,7 +14,7 @@ export function Opportunity() {
           </p>
         </div>
         
-        <h1 className="text-4xl font-bold text-center mb-2">The Opportunity</h1>
+        <h1 className="text-4xl font-bold text-center mb-2">The Challenges</h1>
         
         <section className="mb-20 bg-white rounded-xl shadow-lg p-8">
           <div className="space-y-6">
@@ -75,11 +75,11 @@ export function Opportunity() {
                 <div className="flex justify-center">
                   <div className="w-full max-w-md">
                     <div className="space-y-2">
-                      {/* Stage 1 */}
+                      {/* Stage 1 - New */}
                       <div className="flex items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
                         <div className="ml-4 flex-1">
-                          <div className="bg-[#d7e7f8] text-gray-800 rounded-xl p-3 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#b7d7f8]">
-                            <h4 className="font-semibold text-center text-xs">Concept & Prototype</h4>
+                          <div className="bg-[#f3e8f8] text-gray-800 rounded-xl p-3 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#e3d8e8]">
+                            <h4 className="font-semibold text-center text-xs">User Idea or Need</h4>
                           </div>
                         </div>
                       </div>
@@ -94,8 +94,8 @@ export function Opportunity() {
                       {/* Stage 2 */}
                       <div className="flex items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                         <div className="ml-4 flex-1">
-                          <div className="bg-[#5a80a9] text-white rounded-xl p-3 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#4a7099] h-full flex items-center justify-center">
-                            <h4 className="font-semibold text-center text-xs">Design Development</h4>
+                          <div className="bg-[#d7e7f8] text-gray-800 rounded-xl p-3 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#b7d7f8]">
+                            <h4 className="font-semibold text-center text-xs">Concept & Prototype</h4>
                           </div>
                         </div>
                       </div>
@@ -110,6 +110,22 @@ export function Opportunity() {
                       {/* Stage 3 */}
                       <div className="flex items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
                         <div className="ml-4 flex-1">
+                          <div className="bg-[#5a80a9] text-white rounded-xl p-3 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#4a7099] h-full flex items-center justify-center">
+                            <h4 className="font-semibold text-center text-xs">Design Development</h4>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Arrow 3 */}
+                      <div className="flex justify-center my-1 opacity-0 animate-fade-in" style={{ animationDelay: "0.9s" }}>
+                        <svg className="w-5 h-5 md:w-6 md:h-6 text-[#a6a6a6] transition-all duration-300 transform hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                      </div>
+                      
+                      {/* Stage 4 */}
+                      <div className="flex items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '1.0s' }}>
+                        <div className="ml-4 flex-1">
                           <div className="bg-[#f1bb34] text-gray-800 rounded-xl p-3 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#e1ab24] h-full flex items-center justify-center">
                             <h4 className="font-semibold text-center text-xs">Verification & Validation</h4>
                           </div>
@@ -123,8 +139,8 @@ export function Opportunity() {
                         </svg>
                       </div>
                       
-                      {/* Stage 4 */}
-                      <div className="flex items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '1.0s' }}>
+                      {/* Stage 5 */}
+                      <div className="flex items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '1.3s' }}>
                         <div className="ml-4 flex-1">
                           <div className="bg-[#a6a6a6] text-white rounded-xl p-3 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#969696] h-full flex items-center justify-center">
                             <h4 className="font-semibold text-center text-xs">Regulatory Submission</h4>
@@ -139,8 +155,8 @@ export function Opportunity() {
                         </svg>
                       </div>
                       
-                      {/* Stage 5 */}
-                      <div className="flex items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '1.3s' }}>
+                      {/* Stage 6 */}
+                      <div className="flex items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '1.6s' }}>
                         <div className="ml-4 flex-1">
                           <div className="bg-[#acdb35] text-gray-800 rounded-xl p-3 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#9ccb25] h-full flex items-center justify-center">
                             <h4 className="font-semibold text-center text-xs">Market Launch</h4>

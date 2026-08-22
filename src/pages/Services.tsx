@@ -7,7 +7,7 @@ export function Services() {
     <div className="bg-primary p-8 md:p-10 rounded-2xl shadow-lg mb-12 relative overflow-hidden">
       <div className="absolute inset-0 opacity-10" aria-hidden="true"></div>
       <h1 className="text-3xl md:text-3xl font-bold text-white mb-4">
-        Fractional Leadership and Expert Guidance
+        Fractional R&D Leadership and Expert Guidance
       </h1>
       <p className="text-xl text-white/90">
         For medical device innovation and product development
@@ -23,7 +23,9 @@ export function Services() {
       details: [
         'Product & technology roadmaps',
         'Portfolio planning',
-        'Competitive landscape analysis'
+        'Competitive landscape analysis',
+        'roadmap to commercialization',
+        'partner network'
       ]
     },
     {
@@ -35,7 +37,7 @@ export function Services() {
         'Design, Development, and Verification',
         'DFM and Supplier assessments',
         'Design history file (DHF) management',
-        'Launch readiness'
+        'FDA & Launch readiness'
       ]
     },
     {
