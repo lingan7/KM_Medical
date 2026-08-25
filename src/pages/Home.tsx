@@ -102,8 +102,7 @@ export function Home() {
       {/* CTA Section */}
       <section className="text-center pt-4 pb-8 px-4 md:px-6">
         <h2 className="text-2xl md:text-3xl font-bold mb-6">
-          <span className="block">Ready to accelerate</span>
-          <span className="text-xl md:text-3xl font-bold">your medical device development?</span>
+          Ready to explore opportunity?
         </h2>
         <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
           Contact us today to discuss how we can support your medical device journey.

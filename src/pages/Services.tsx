@@ -24,8 +24,8 @@ export function Services() {
         'Product & technology roadmaps',
         'Portfolio planning',
         'Competitive landscape analysis',
-        'roadmap to commercialization',
-        'partner network'
+        'Roadmap to commercialization',
+        'Partner network'
       ]
     },
     {

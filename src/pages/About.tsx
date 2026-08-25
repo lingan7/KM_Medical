@@ -147,15 +147,19 @@ export function About() {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Trusted</span>
+                  <span>Right Expertise. When Needed.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Experienced</span>
+                  <span>Proven MedTech Experience</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-primary mr-2">•</span>
-                  <span>Domain Experts</span>
+                  <span>Trusted Relationships</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-primary mr-2">•</span>
+                  <span>Accountable Execution</span>
                 </li>
               </ul>
             </div>

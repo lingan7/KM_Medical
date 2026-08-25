@@ -79,7 +79,7 @@ export function Opportunity() {
                       <div className="flex items-center opacity-0 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
                         <div className="ml-4 flex-1">
                           <div className="bg-[#f3e8f8] text-gray-800 rounded-xl p-3 shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#e3d8e8]">
-                            <h4 className="font-semibold text-center text-xs">User Idea or Need</h4>
+                            <h4 className="font-semibold text-center text-xs">Idea / User Need</h4>
                           </div>
                         </div>
                       </div>
