@@ -220,9 +220,9 @@ export function About() {
 
       {/* CTA Button Section */}
       <section className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6">Understand the challenges?</h2>
+        <h2 className="text-2xl font-bold text-gray-800 mb-6">Understand the challenges</h2>
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-          the product developmental cycle journey & how we can help bring med device ideas to life
+          Of the product development journey & how we can bring ideas to commercialization
         </p>
         <Link 
           to="/opportunity"
