@@ -1,4 +1,4 @@
-import { FaRocket, FaAward, FaUserTie, FaNetworkWired } from 'react-icons/fa';
+import { FaUserTie, FaNetworkWired, FaAward, FaRocket } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 export function About() {
@@ -214,6 +214,96 @@ export function About() {
                   <span>Strong partner network</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+      {/* Flexible Ways to Engage */}
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold text-center mb-4">Flexible Ways to Engage</h2>
+        <p className="text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+          Start with the support you need today. Expand as priorities change.
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Strategic Advisory */}
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex justify-center mb-6">
+                <img 
+                  src={`${import.meta.env.BASE_URL}icons/strategic-advisory.png`} 
+                  alt="Strategic Advisory" 
+                  className="h-16 w-16"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = 'https://via.placeholder.com/64x64?text=SA';
+                  }}
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-center mb-3">Strategic Advisory</h3>
+              <div className="w-12 h-1 bg-red-500 mx-auto mb-4"></div>
+              <p className="text-center font-bold text-gray-700 mb-2">Get Clarity and direction</p>
+              <p className="text-center text-gray-600">Decision support at critical points</p>
+            </div>
+            
+            {/* Fractional R&D Leadership */}
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex justify-center mb-6">
+                <img 
+                  src={`${import.meta.env.BASE_URL}icons/fractional-leadership.png`} 
+                  alt="Fractional R&D Leadership" 
+                  className="h-16 w-16"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = 'https://via.placeholder.com/64x64?text=FL';
+                  }}
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-center mb-3">Fractional R&D Leadership</h3>
+              <div className="w-12 h-1 bg-red-500 mx-auto mb-4"></div>
+              <p className="text-center font-bold text-gray-700 mb-2">Add experienced leadership</p>
+              <p className="text-center text-gray-600">Ongoing direction and execution accountability</p>
+            </div>
+            
+            {/* Focused Project */}
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex justify-center mb-6">
+                <img 
+                  src={`${import.meta.env.BASE_URL}icons/focused-project.png`} 
+                  alt="Focused Project" 
+                  className="h-16 w-16"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = 'https://via.placeholder.com/64x64?text=FP';
+                  }}
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-center mb-3">Focused Project</h3>
+              <div className="w-12 h-1 bg-red-500 mx-auto mb-4"></div>
+              <p className="text-center font-bold text-gray-700 mb-2">Accomplish a defined objective</p>
+              <p className="text-center text-gray-600">Clear scope, deliverables and timeline</p>
+            </div>
+            
+            {/* Specialist Network */}
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <div className="flex justify-center mb-6">
+                <img 
+                  src={`${import.meta.env.BASE_URL}icons/specialist-network.png`} 
+                  alt="Specialist Network" 
+                  className="h-16 w-16"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = 'https://via.placeholder.com/64x64?text=SN';
+                  }}
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-center mb-3">Specialist Network</h3>
+              <div className="w-12 h-1 bg-red-500 mx-auto mb-4"></div>
+              <p className="text-center font-bold text-gray-700 mb-2">Access the right expertise</p>
+              <p className="text-center text-gray-600">Trusted specialists coordinated around your needs</p>
             </div>
           </div>
         </section>
